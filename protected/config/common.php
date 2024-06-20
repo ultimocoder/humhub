@@ -7,6 +7,6 @@
 return [
    
         'params' => [
-            'skipCaptchaValidations' => true, // Define your parameter here
+            'skipCaptchaValidation' => true, // Define your parameter here
         ]
 ];
