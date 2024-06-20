@@ -46,7 +46,7 @@ class AuthenticationSettingsForm extends Model
         /* @var $module Module */
         $module = Yii::$app->getModule('user');
         $settingsManager = $module->settings;
-
+       
         $this->internalUsersCanInviteByEmail = $settingsManager->get('auth.internalUsersCanInviteByEmail');
         $this->internalUsersCanInviteByLink = $settingsManager->get('auth.internalUsersCanInviteByLink');
         $this->internalRequireApprovalAfterRegistration = $settingsManager->get('auth.needApproval');
@@ -56,7 +56,7 @@ class AuthenticationSettingsForm extends Model
         $this->hideOnlineStatus = $settingsManager->get('auth.hideOnlineStatus');
         $this->defaultUserIdleTimeoutSec = $settingsManager->get('auth.defaultUserIdleTimeoutSec');
         $this->allowGuestAccess = $settingsManager->get('auth.allowGuestAccess');
-        $this->showCaptureInRegisterForm = $settingsManager->get('auth.showCaptureInRegisterForm');
+        $this->showCaptureInRegisterForm = 0;
         $this->defaultUserProfileVisibility = $settingsManager->get('auth.defaultUserProfileVisibility');
         $this->registrationSendMessageMailContent = $settingsManager->get('auth.registrationSendMessageMailContent', ApproveUserForm::getDefaultSendMessageMailContent());
         $this->registrationApprovalMailContent = $settingsManager->get('auth.registrationApprovalMailContent', ApproveUserForm::getDefaultApprovalMessage());
@@ -91,7 +91,7 @@ class AuthenticationSettingsForm extends Model
             'hideOnlineStatus' => Yii::t('AdminModule.user', 'Hide online status of users'),
             'defaultUserIdleTimeoutSec' => Yii::t('AdminModule.user', 'Default user idle timeout, auto-logout (in seconds, optional)'),
             'allowGuestAccess' => Yii::t('AdminModule.user', 'Allow visitors limited access to content without an account (Adds visibility: "Guest")'),
-            'showCaptureInRegisterForm' => Yii::t('AdminModule.user', 'Include captcha in registration form'),
+
             'defaultUserProfileVisibility' => Yii::t('AdminModule.user', 'Default user profile visibility'),
             'registrationSendMessageMailContent' => Yii::t('AdminModule.user', 'Default content of the email when sending a message to the user'),
             'registrationApprovalMailContent' => Yii::t('AdminModule.user', 'Default content of the registration approval email'),
