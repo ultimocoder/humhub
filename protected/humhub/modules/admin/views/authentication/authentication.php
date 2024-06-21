@@ -6,7 +6,7 @@ use humhub\modules\ui\form\widgets\ActiveForm;
 use humhub\modules\user\models\User;
 use humhub\modules\user\Module;
 use humhub\widgets\DataSaved;
-use yii\helpers\Html;
+use yii\helpers\Html; 
 
 /* @var AuthenticationSettingsForm $model */
 

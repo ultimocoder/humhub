@@ -65,7 +65,7 @@ class AuthenticationSettingsForm extends Model
 
     /**
      * @inheritdoc
-     */
+     */ 
     public function rules()
     {
         return [

@@ -53,8 +53,15 @@ class Invite extends ActiveRecord
     /**
      * @var bool
      */
-    public $skipCaptchaValidation = false;
+    public $skipCaptchaValidation;
 
+    public function __construct($config = [])
+    {
+        // Ensure Yii::$app is available when setting properties
+        $this->skipCaptchaValidation = Yii::$app->params['skipCaptchaValidation'] ?? null;
+
+        parent::__construct($config);
+    }
     /**
      * @inheritdoc
      */
@@ -305,7 +312,7 @@ class Invite extends ActiveRecord
     }
 
     /**
-     * @return bool
+     * @return bool 
      */
     public function showCaptureInRegisterForm()
     {
