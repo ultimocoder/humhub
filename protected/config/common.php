@@ -5,7 +5,4 @@
  * @see https://docs.humhub.org/docs/admin/advanced-configuration
  */
 return [
-       'params' => [
-            'skipCaptchaValidation' => false, // Define your parameter here
-        ]
 ];
