@@ -135,7 +135,7 @@ class AuthenticationSettingsForm extends Model
         }
 
         if ($settingsManager->get('auth.anonymousRegistration')) {
-            $settingsManager->set('auth.showCaptureInRegisterForm', $this->showCaptureInRegisterForm);
+          
         }
 
         if ($settingsManager->get('auth.needApproval')) {

@@ -309,6 +309,8 @@ class Invite extends ActiveRecord
      */
     public function showCaptureInRegisterForm()
     {
-        return !$this->skipCaptchaValidation && (Yii::$app->getModule('user')->settings->get('auth.showCaptureInRegisterForm'));
+        return
+            !$this->skipCaptchaValidation
+            && (Yii::$app->getModule('user')->settings->get('auth.showCaptureInRegisterForm'));
     }
 }
