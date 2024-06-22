@@ -51,7 +51,7 @@ class InitialData
         Yii::$app->getModule('user')->settings->set('auth.internalUsersCanInviteByLink', '1');
         Yii::$app->getModule('user')->settings->set('auth.showCaptureInRegisterForm', '1');
 
-        // Mailing
+        // Mailing 
         Yii::$app->settings->set('mailer.transportType', 'php');
         Yii::$app->settings->set('mailer.systemEmailAddress', 'social@example.com');
         Yii::$app->settings->set('mailer.systemEmailName', 'My Social Network');

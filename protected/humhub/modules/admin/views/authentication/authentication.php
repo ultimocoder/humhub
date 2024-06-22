@@ -6,7 +6,7 @@ use humhub\modules\ui\form\widgets\ActiveForm;
 use humhub\modules\user\models\User;
 use humhub\modules\user\Module;
 use humhub\widgets\DataSaved;
-use yii\helpers\Html;
+use yii\helpers\Html; 
 
 /* @var AuthenticationSettingsForm $model */
 
@@ -24,8 +24,6 @@ $userModule = Yii::$app->getModule('user');
     <?= $form->field($model, 'allowGuestAccess')->checkbox(); ?>
 
     <?= $form->field($model, 'internalAllowAnonymousRegistration')->checkbox(); ?>
-
-    <?= $form->field($model, 'showCaptureInRegisterForm')->checkbox(); ?>
 
     <?= $form->field($model, 'internalUsersCanInviteByEmail')->checkbox(); ?>
 
