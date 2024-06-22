@@ -14,7 +14,7 @@ class m240621_081740_fix_captcha_in_registration extends Migration
     {
         $this->delete('setting', ['name' => 'auth.showCaptureInRegisterForm']);
     }
-
+ 
     /**
      * {@inheritdoc}
      */
