@@ -197,7 +197,7 @@ class Module extends \humhub\components\Module
      * @var bool Enable or disable registration form captcha
      * @since 1.17
      */
-    public $enableRegistrationFormCaptcha = true;
+    public $enableRegistrationFormCaptcha = false;
 
 
     /**
