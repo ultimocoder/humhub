@@ -133,10 +133,7 @@ class AuthenticationSettingsForm extends Model
             $settingsManager->set('auth.defaultUserProfileVisibility', $this->defaultUserProfileVisibility);
         }
 
-        if ($settingsManager->get('auth.anonymousRegistration')) {
-            $settingsManager->set($module->enableRegistrationFormCaptcha, $this->showCaptureInRegisterForm);
-        }
-
+        
         if ($settingsManager->get('auth.needApproval')) {
             if (empty($this->registrationSendMessageMailContent) || $this->registrationSendMessageMailContent === ApproveUserForm::getDefaultSendMessageMailContent()) {
                 $this->registrationSendMessageMailContent = ApproveUserForm::getDefaultSendMessageMailContent();
